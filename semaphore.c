@@ -1,4 +1,3 @@
-// C program to demonstrate working of Semaphores 
 #include <stdio.h> 
 #include <pthread.h> 
 #include <semaphore.h> 
@@ -8,14 +7,14 @@ sem_t mutex;
 
 void* thread(void* arg) 
 { 
-	//wait 
+	 
 	sem_wait(&mutex); 
 	printf("\nEntered..\n"); 
 
-	//critical section 
+	
 	sleep(4); 
 	
-	//signal 
+	
 	printf("\nJust Exiting...\n"); 
 	sem_post(&mutex); 
 } 
